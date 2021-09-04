@@ -1,0 +1,233 @@
+* {margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+body{
+    background-image: url(../img/background.png);
+    background-size:cover;
+    font-family: 'Mate SC', serif;
+    color: #FFC106;
+    background-position-y: -250px;
+    overflow-x:hidden ;
+}
+
+/* Judul */
+
+.judul{
+    font-size: 110px;
+    text-align: center;
+    margin-top: 180px;
+    text-shadow: 10px 8px 8px black;
+    letter-spacing: 20px;
+    font-style: italic;
+}
+
+.judul .klasik{
+    color: #7CB8FF;
+    font-size: 200px;
+}
+
+.judul .waktu{
+    align-self:flex-start;
+    margin-left: 260px;
+    text-align: left;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer h3.text{
+    color: white;
+    letter-spacing: 8px;
+    font-size: 25px;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 40px;
+    font-style: italic;
+
+    
+}
+
+/* Side Nav */
+
+.nav{
+    position: absolute;
+    top: 80px;
+    width: 10%;
+    right: 20px;
+    height: 80vh;
+    /* border: 5px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.nav ul li img{
+    width: 150px;
+}
+
+.nav ul li:nth-child(even){
+    transform: translateX(150%);
+}
+.nav ul li{
+    transition: all .5s;
+}
+
+.nav li.logo1:hover ~ li:nth-child(2){
+    transform: translateX(0);
+    
+}
+.nav li.logo2:hover ~ li:nth-child(4){
+    transform: translateX(0);
+    
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media screen and (max-width:1420px){
+    .footer h3.text{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width:1300px) {
+    .judul .waktu{
+        align-self: center;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .nav{
+        right: 50px;
+    }
+    .footer h3.text{
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width:1000px){
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    .footer h3.text{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .judul{
+        text-align: center;
+        margin-top: 40px;
+        text-shadow: 10px 8px 8px black;
+        letter-spacing: 20px;
+    }
+    
+    .judul .klasik{
+        color: #7CB8FF;
+        font-size: 100px;
+    }
+    
+    .judul .waktu{
+        align-self:center;
+        text-align: center;
+        font-size: 100px;
+    }
+    
+    .nav{
+        position: static;
+        width: 100%;
+        height: 500px;
+        /* border: 5px solid white; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .nav ul{
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        
+    }
+    
+    .nav ul li img{
+        width: 150px;
+    }
+    
+    .nav ul li:nth-child(even){
+        transform: translateX(0%);
+        align-self:center   ;
+    }
+    
+
+}
+
+
+@media screen and (max-width:450px) {
+    .judul{
+        margin-top: 70px;
+        letter-spacing: 10px;
+    }
+    .judul .klasik{
+        color: #7CB8FF;
+        font-size: 80px;
+    }
+    
+    .judul .waktu{
+        align-self:center;
+        text-align: center;
+        font-size: 70px;
+    }
+    .nav{
+        transform: scale(70%);
+        margin-top: 10px;
+    }
+    .footer h3.text{
+        width: 80%;
+        font-size: 15px;
+        letter-spacing: 5px;
+        line-height: 20px;
+    }
+    .footer{
+        height: 8%;
+    }
+}

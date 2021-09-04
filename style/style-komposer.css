@@ -1,0 +1,113 @@
+*{margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+body{
+    background-image: url(../img/background.png);
+    font-family: 'Mate SC', serif;
+    color: #FFC106;
+    background-position-y: -250px;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* TITLE */
+.title{
+    margin-top: 80px;
+}
+.title h1{
+    font-size: 8vw;
+    font-style: italic;
+    text-shadow: 5px 3px 10px black;
+    text-align: center;
+    letter-spacing: 10px;
+    text-decoration: underline;
+}
+
+/* ALBUM KOMPOSER */
+
+.komposer {
+    width: 80%;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 10px;
+    
+}
+
+.komposer a{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    z-index: 2;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+
+.komposer img{
+    width: 80%;
+    border-radius: 100%;
+    box-shadow: 5px 3px 15px black;
+
+}
+
+.komposer h4{
+    /* margin-top: -211px; */
+    font-variant: small-caps;
+    font-size: 50px;
+    color: #7CB8FF;
+    transition: all 1s;
+    text-shadow: 5px 3px 10px black;
+    opacity: 0;
+    left: 10vw;
+    bottom: 0;
+    position: absolute;
+    text-decoration: underline;
+}
+
+.komposer a :hover ~ h4{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* DESKRIPSI MUSIK */
+
+
+
+@media screen and (max-width:780px) {
+    .title h1{
+        font-size: 15vw;
+    }
+    .komposer {
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap: 10px;
+        row-gap: 50px;
+    }
+    .komposer h4{
+        text-align: center;
+        margin-top: 0px;
+        font-variant: small-caps;
+        font-size: 30px;
+        color: #7CB8FF;
+        transition: all 1s;
+        text-shadow: 5px 3px 10px black;
+        opacity: 0;
+        position: static;
+        left: 60%;
+        bottom: 10px;
+        text-decoration: underline;
+    }
+}
+
+h5{
+    opacity: 0;
+}
+a:hover ~ h5{
+    opacity: 1;
+}

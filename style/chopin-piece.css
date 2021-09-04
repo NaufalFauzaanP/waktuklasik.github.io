@@ -1,0 +1,136 @@
+*{margin: 0; padding: 0;}
+body{
+    background-image: url(../img/background.png);
+    background-size: cover;
+    font-family: 'Mate SC', serif;
+    color: #FFC106;
+    background-position-y: -250px;
+    height: 1300px;
+}
+.title{
+    text-align: center;
+    text-shadow: 10px 8px 8px black;
+    margin: 30px auto 50px auto;
+}
+
+.title h1{
+    font-size: 66px;
+}
+
+.title p{
+    font-size: 25px;
+}
+
+.title img{
+    width: 300px;
+    border-radius: 100%;
+    box-shadow: 5px 3px 15px black;
+}
+
+/* PIECE ALBUM */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    gap: 10px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.container-piece {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 40%);
+    border-radius: 5px;
+    
+}
+
+.youtube{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container-piece h3{
+    font-size: 33px;
+}
+
+.container-piece p{
+    font-size: 22px;
+    color: #7CB8FF;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-piece h4{
+    font-size: 18px;
+}
+
+@media screen and (max-width:768px) {
+    .title img{
+        width: 250px;
+    }
+
+    .title h1{
+        font-size: 60px;
+    }
+
+    .title p{
+        font-size: 20px;
+    }
+
+    .container{
+        margin-right: 5vw ;
+        margin-left: 5vw ;
+    }
+    .container-piece p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:546px) {
+    .title img{
+        width: 220px;
+    }
+
+    .title h1{
+        font-size: 50px;
+    }
+
+    .title p{
+        font-size: 17px;
+    }
+
+    .container{
+        margin-right: 2vw ;
+        margin-left: 2vw ;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+    
+    .container-piece p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title img{
+        width: 200px;
+    }
+
+    .title h1{
+        font-size: 40px;
+    }
+
+    .title p{
+        font-size: 15px;
+    }
+
+    .container{
+        margin-right: 2vw ;
+        margin-left: 2vw ;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+
+    .container-piece p{
+        font-size: 15px;
+    }
+}
